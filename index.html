@@ -12,6 +12,15 @@
         background: #f9f9f9;
         color: #222;
       }
+      .blur {
+        display: inline-block;
+        color: transparent;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        filter: blur(6px);
+        user-select: none;
+        cursor: default;
+      }
+
 
       h1 {
         font-weight: 600;
@@ -19,28 +28,79 @@
       }
 
       p {
-        font-size: 1.2rem;
-        margin: 2rem 0;
+        font-size: 1.1rem;
+        margin: 1rem 0;
       }
 
-      .blur {
+      form {
+        margin-top: 2rem;
         display: inline-block;
-        filter: blur(6px);
-        user-select: none; /* optional: prevent copying */
-        cursor: default;
+        text-align: left;
+        background: white;
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
-      h2 {
-        margin-top: 4rem;
-        font-weight: 400;
+      label {
+        font-weight: 500;
+        display: block;
+        margin-top: 1rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.6rem;
+        margin-top: 0.4rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      button {
+        margin-top: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        background-color: #222;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #444;
+      }
+
+      .footer {
+        margin-top: 3rem;
         color: #555;
+        font-size: 0.95rem;
       }
     </style>
   </head>
   <body>
-    <h1>We are making software solutions.</h1>
-    <p>Currently building <span class="blur">IYKYK</span></p>
-    <h2>Made with ❤️ from the south of Sweden.</h2>
-    
+    <p>We build modern software solutions tailored to Nordic startups and scale-ups.</p>
+    <p>Currently developing <span class="blur">made you look :)</span></p>
+
+    <form name="contact" netlify>
+      <h2>Contact Us</h2>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="footer">
+      Made with ❤️ from the south of Sweden.<br />
+      BG Solutions AB © 2025
+    </div>
   </body>
 </html>
